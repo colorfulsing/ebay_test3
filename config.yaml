@@ -8,3 +8,25 @@ parsers:
   - file: ./parsers/product.rb
     page_type: product
     disabled: false
+exporters:
+  - exporter_name: products_json # Must be unique
+    exporter_type: json
+    collection: products
+    write_mode: pretty_array # can be `line`,`pretty`, `pretty_array`, or `array`
+
+  - exporter_name: products_csv # Must be unique
+    exporter_type: csv
+    collection: products
+    fields:
+      - header: "gid"
+        path: "_gid"
+      - header: "collection"
+        path: "_collection"
+      - header: "name"
+        path: "name"
+      - header: "url"
+        path: "url"
+      - header: "status"
+        path: "status"
+      - header: "price"
+        path: "price"
