@@ -1,0 +1,6 @@
+seeder:
+  file: ./seeder/seeder.rb
+  disabled: true
+parsers:
+  - filer: ./parsers/search.rb
+    disabled: true
