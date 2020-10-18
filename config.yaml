@@ -2,5 +2,5 @@ seeder:
   file: ./seeder/seeder.rb
   disabled: true
 parsers:
-  - filer: ./parsers/search.rb
+  - file: ./parsers/search.rb
     disabled: true
